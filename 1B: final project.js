@@ -418,9 +418,9 @@ function update_water(gameObject) {
         return 0;
     }
 
-    // 等待 5 秒后水开始蔓延
+    // 等待 3 秒后水开始蔓延
     water_timer = water_timer + delta_time();
-    if (water_timer > 5) {
+    if (water_timer > 3) {
         water_start = true;
     }
 
@@ -470,7 +470,7 @@ function update_water(gameObject) {
         in_water_time = 0;
     }
 
-    // 玩家在水中超过 5 秒 Game Over
+    // 玩家在水中超过 3 秒 Game Over
     if (in_water_time > 3 && !game_over) {
     game_over = true;
     play(mario_death);
